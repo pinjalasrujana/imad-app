@@ -10,7 +10,6 @@ body {
 
 .text-big {
     font-size: 300%;
-    text-decoration:underline;
 }
 
 .bold {
@@ -21,5 +20,8 @@ body {
 
 .img-medium {
     height: 200px;
+}
+.h4{
+     text-decoration:underline;
 }
 
