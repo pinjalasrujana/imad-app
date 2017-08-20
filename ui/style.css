@@ -8,11 +8,12 @@ body {
     text-align: center;
 }
 
+.text-big {
+    font-size: 300%;
+}
+
 .bold {
     font-weight: bold;
-    text-align:center;
-       font-size: 300%;
-       background-color:gray;
 }
 
 .img-medium {
