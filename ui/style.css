@@ -24,4 +24,12 @@ body {
 .text-big.bold.h4{
      text-decoration:underline;
 }
-
+ .container{
+     max-width: 800px;
+     margin: 0 auto;
+     color: #7d7b7b;
+    font-family: sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
