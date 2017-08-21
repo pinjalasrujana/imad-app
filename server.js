@@ -27,18 +27,22 @@ var articles={
                     </p>`
   },
   'article-two':{ title:'Article Two/jyothsna',
-    heading:'Article Two',
-    date:'Aug 19,2017',
-    content:`      <p>
-                        This is article Two This is article Two This is article Two.
-                       
-                    </p>`},
-  'artcle-three':{ title:'Article Three/jyothsna',
-    heading:'Article Three',
-    date:'Aug 19,2017',
-    content:`      <p>
-                        This is article Three.This is article Three.This is article Three.
-                    </p>`}
+                heading:'Article Two',
+                date:'Aug 19,2017',
+                content:`      <p>
+                                    This is article Two This is article Two This is article Two.
+                                   
+                                </p>`
+        
+             },
+  'artcle-three':{ 
+             title:'Article Three/jyothsna',
+            heading:'Article Three',
+            date:'Aug 19,2017',
+            content:`      <p>
+                                This is article Three.This is article Three.This is article Three.
+                            </p>`
+      }
 };
 function createTemplate(data){
     var title =data.title;
