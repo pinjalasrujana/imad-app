@@ -9,5 +9,5 @@ function moveRight(){
 }
 var img = document.getElementById('change');
        img.onclick = function(){
-           var intervel = setIntervel(moveRight,100);
+           var interval = setInterval(moveRight,50);
 };
