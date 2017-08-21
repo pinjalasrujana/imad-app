@@ -12,11 +12,8 @@ button.onclick =function(){
         }
          
     }
-    request.open('GET','http://http://u15pa1a04c8.imad.hasura-app.io/counter');
+    request.open('GET','http://http://u15pa1a04c8.imad.hasura-app.io/counter',true);
     request.send('null');
-   /*counter = counter + 1;
-   var span = document.getElementById('count');
-   span.innerHTML=counter.toString();*/
 };
 
 
