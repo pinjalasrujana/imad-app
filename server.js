@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg').pool;
+//var pool = require('pg').pool;
 
 var config = {
     user:'u15pa1a04c8',
@@ -96,7 +96,7 @@ app.get('/', function (req, res) {
 });
 
 
-var pool =new Pool (config);
+/*var pool =new Pool (config);
 app.get('/test-db', function (req, res) {
     pool.query('SELECT * FROM test', function(err, result){
         if(err){
@@ -105,7 +105,7 @@ app.get('/test-db', function (req, res) {
             res.send(JSON.stringify(result));
         }
     }); 
-});
+});*/
 
 
 app.get('/:articleName', function (req, res) {
