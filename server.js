@@ -14,46 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-   'article-one':{
-    title:'Article One/jyothsna',
-    heading:'Article One',
-    date:'Aug 19,2017',
-    content:`      <p>
-                        This is article one.This is article one.This is article one.This is article one.
-                        This is article one.This is article one.This is article one.This is article one.
-                        This is article one.This is article one.This is article one.
-                    </p>
-                     <p> 
-                         This is article one.This is article one.This is article one.This is article one.
-                        This is article one.This is article one.This is article one.This is article one.
-                        This is article one.This is article one.This is article one.
-                    </p>
-                     <p> 
-                         This is article one.This is article one.This is article one.This is article one.
-                        This is article one.This is article one.This is article one.This is article one.
-                        This is article one.This is article one.This is article one.
-                    </p>`
-  },
-  'article-two':{ 
-                 title:'Article Two/jyothsna',
-                heading:'Article Two',
-                date:'Aug 18,2017',
-                content:`      <p>
-                                    This is article Two This is article Two This is article Two.
-                                   
-                                </p>`
-        
-             },
-  'article-three':{ 
-             title:'Article Three/jyothsna',
-            heading:'Article Three',
-            date:'Aug 20,2017',
-            content:`      <p>
-                                This is article Three.This is article Three.This is article Three.
-                            </p>`
-      }
-};
 function createTemplate(data){
     var title =data.title;
     var date= data.date;
@@ -123,7 +83,7 @@ app.get('/test-db', function (req, res) {
 
 
 app.get('/articles/:articleName', function (req, res) {
-    pool.query("SELECT * FROM article WHERE title ='" + req.params.articleName + "'", function(err, result){
+    pool.query("SELECT * FROM article WHERE title =$1" ,[req.params.articleName], function(err, result){
         if(err){
           res.status(500).send(err.toString());
         }else{
