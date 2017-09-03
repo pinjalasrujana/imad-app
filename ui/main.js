@@ -1,5 +1,3 @@
-
-
 var submit = document.getElementById('submit_btn');
 submit.onclick =function(){
     var request = new XMLHttpRequest();
@@ -13,7 +11,6 @@ submit.onclick =function(){
                 alert('something went wrong');
             }
         }
-        
     };
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
