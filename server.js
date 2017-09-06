@@ -145,6 +145,7 @@ app.post('/login',function(req,res){
                 var salt = dbString.split('$')[2];
                 var hashedPassword = hash(password, salt);
                 if(hashedPassword === dbString){
+                    req.session.auth = {userId: result.rows[0].Id};
                     res.send('credentials correct!');
                 }
                 else{
@@ -166,6 +167,7 @@ app.get('/check-login', function (req, res) {
     }
     
 });
+
 
 
 app.get('/ui/style.css', function (req, res) {
